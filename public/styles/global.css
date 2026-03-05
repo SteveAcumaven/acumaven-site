@@ -220,5 +220,5 @@ footer strong { color: #fff; }
 
 /* Logo wordmark */
 .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
-.logo-text { color: #fff; font-family: 'Anton', sans-serif; font-size: 1.6rem; letter-spacing: 0.02em; font-weight: 400; }
+.logo-text { color: #fff; font-family: 'Anton', sans-serif; font-size: 2.4rem; letter-spacing: 0.04em; font-weight: 400; line-height: 1; }
 .logo-text em { font-style: normal; color: #7eb8e8; }
