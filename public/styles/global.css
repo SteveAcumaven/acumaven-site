@@ -30,7 +30,7 @@ a:hover { text-decoration: underline; }
 /* Nav */
 nav {
   background: var(--navy);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -215,8 +215,8 @@ footer strong { color: #fff; }
 }
 
 /* Logo */
-.logo-img { height: 64px; width: auto; display: block; }
-@media (max-width: 768px) { .logo-img { height: 50px; } }
+.logo-img { height: 90px; width: auto; display: block; }
+@media (max-width: 768px) { .logo-img { height: 90px; } }
 
 /* Logo wordmark */
 .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
