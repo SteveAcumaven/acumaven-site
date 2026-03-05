@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Celigo Integration Partner" description="AcuMaven is an official Celigo Certified Partner. We connect Acumatica, Salesforce, HubSpot, Shopify and more — for Acumatica clients and beyond.">
+
+  <section class="hero">
+    <div class="container">
+      <h1>Celigo Integration That<br/><em>Holds Up in Production</em></h1>
+      <p>Official Celigo Certified Partner. We design and build integration flows for Acumatica clients — and for companies that just need their systems to talk to each other.</p>
+      <a href="/#contact" class="btn-primary">Start a conversation →</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>What We Integrate</h2>
+      <p class="section-sub">Whether you're running Acumatica or not — if you need Celigo, we've probably built it.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Acumatica ↔ HubSpot</h3>
+          <p>Bi-directional customer and order sync. Sales pipeline to service order, quotes to invoices. Production-tested across multiple clients.</p>
+        </div>
+        <div class="service-card">
+          <h3>Acumatica ↔ Shopify</h3>
+          <p>Order management, inventory sync, fulfillment flows. E-commerce to ERP without the data gaps.</p>
+        </div>
+        <div class="service-card">
+          <h3>Acumatica ↔ Salesforce</h3>
+          <p>Account, contact, and opportunity sync. Keep your CRM and ERP in agreement without manual entry.</p>
+        </div>
+        <div class="service-card">
+          <h3>Custom Flow Design</h3>
+          <p>Webhook-based triggers, substitution mapping, error handling logic, and monitoring. We build integrations that don't silently fail at 2 AM.</p>
+        </div>
+        <div class="service-card">
+          <h3>Non-Acumatica Integrations</h3>
+          <p>You don't need to run Acumatica to work with us. If you need Celigo flows built between any supported platforms, we can help.</p>
+        </div>
+        <div class="service-card">
+          <h3>Integration Rescue</h3>
+          <p>Inherited a broken Celigo environment? We audit, fix, and stabilize integrations that were set up without a production-ready design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--light);">
+    <div class="container">
+      <h2>Why Celigo Certification Matters</h2>
+      <p class="section-sub">Not every Acumatica partner is a Celigo partner. Here's why it makes a difference.</p>
+      <p style="max-width:680px; color: var(--muted);">Celigo's iPaaS platform is purpose-built for business integration — it has native Acumatica connectors that generic integration tools don't. As a Certified Partner, we have direct access to Celigo's technical support, pre-built connector logic, and the partner network.<br/><br/>
+      More importantly: we've built Celigo flows in production, across multiple clients, across multiple flow types. We've seen what breaks, how it breaks, and how to design around it.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Ready to connect your systems?</h2>
+      <p class="section-sub">Tell us what you're integrating and we'll tell you if it's a good fit.</p>
+      <div class="contact-form">
+        <form name="celigo-contact" method="POST" data-netlify="true">
+          <label>Name</label>
+          <input type="text" name="name" required />
+          <label>Company</label>
+          <input type="text" name="company" />
+          <label>Email</label>
+          <input type="email" name="email" required />
+          <label>What systems do you need to integrate?</label>
+          <textarea name="message" placeholder="e.g. Acumatica + HubSpot, or Salesforce + Shopify..." required></textarea>
+          <button type="submit">Let's talk →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Base>

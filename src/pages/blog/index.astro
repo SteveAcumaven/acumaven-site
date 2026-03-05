@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Agent-published posts live in src/content/blog/*.md
+// Scout writes them, Pixel commits, Cloudflare auto-deploys
+const postFiles = import.meta.glob('../../content/blog/*.md', { eager: true }) as Record<string, any>;
+const posts = Object.entries(postFiles).map(([path, mod]) => ({ ...mod, slug: path.split('/').pop()?.replace('.md','') }));
+const sorted = posts.sort((a: any, b: any) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+---
+<Base title="Blog" description="Acumatica ERP insights, implementation lessons, and field service technology from the AcuMaven team.">
+
+  <section style="padding: 4rem 0 2rem; background: var(--light);">
+    <div class="container">
+      <h1 style="font-size: 2rem; font-weight: 800; color: var(--navy);">From the Field</h1>
+      <p style="color: var(--muted); margin-top: 0.5rem;">Acumatica implementation lessons, field service tech, and what we're seeing in the market.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="post-list">
+        {sorted.map(post => (
+          <a href={`/blog/${post.file.split('/').pop()?.replace('.md','')}`} style="text-decoration:none; color:inherit;">
+            <div class="post-card">
+              <div class="tag">{post.frontmatter.category}</div>
+              <h3>{post.frontmatter.title}</h3>
+              <p>{post.frontmatter.excerpt}</p>
+              <p style="font-size:0.8rem; color: var(--muted); margin-top:0.5rem;">{post.frontmatter.author} · {new Date(post.frontmatter.date).toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'})}</p>
+            </div>
+          </a>
+        ))}
+        {sorted.length === 0 && (
+          <p style="color: var(--muted);">Posts coming soon. Check back shortly.</p>
+        )}
+      </div>
+    </div>
+  </section>
+
+</Base>
