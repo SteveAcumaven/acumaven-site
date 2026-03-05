@@ -215,10 +215,23 @@ footer strong { color: #fff; }
 }
 
 /* Logo */
-.logo-img { height: 72px; width: 72px; object-fit: cover; object-position: 43% 50%; border-radius: 4px; display: block; }
-@media (max-width: 768px) { .logo-img { height: 56px; width: 56px; } }
+
+@media (max-width: 768px) {  }
 
 /* Logo wordmark */
 .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
 .logo-text { color: #fff; font-family: 'Anton', sans-serif; font-size: 2.4rem; letter-spacing: 0.04em; font-weight: 400; line-height: 1; }
 .logo-text em { font-style: normal; color: #7eb8e8; }
+
+/* Logo mark — background-image zoom to center-crop on the brushstroke circle */
+.logo-mark {
+  display: block;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  background-image: url('/logos/logo-white.svg');
+  background-size: 260px auto;
+  background-position: 48% 48%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) { .logo-mark { width: 52px; height: 52px; background-size: 210px auto; } }
