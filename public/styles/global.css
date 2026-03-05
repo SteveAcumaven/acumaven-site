@@ -220,18 +220,27 @@ footer strong { color: #fff; }
 
 /* Logo wordmark */
 .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
-.logo-text { color: #fff; font-family: 'Anton', sans-serif; font-size: 2.4rem; letter-spacing: 0.04em; font-weight: 400; line-height: 1; }
+.logo-text { color: #fff; font-family: 'Anton', sans-serif; font-size: 1.8rem; letter-spacing: 0.04em; font-weight: 400; line-height: 1; }
 .logo-text em { font-style: normal; color: #7eb8e8; }
 
 /* Logo mark — background-image zoom to center-crop on the brushstroke circle */
 .logo-mark {
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   flex-shrink: 0;
   background-image: url('/logos/logo-white.svg');
-  background-size: 94px auto;
+  background-size: 106px auto;
   background-position: 45% 28%;
   background-repeat: no-repeat;
 }
-@media (max-width: 768px) { .logo-mark { width: 52px; height: 52px; background-size: 76px auto; } }
+@media (max-width: 768px) { .logo-mark {
+  display: block;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  background-image: url('/logos/logo-white.svg');
+  background-size: 106px auto;
+  background-position: 45% 28%;
+  background-repeat: no-repeat;
+} }
