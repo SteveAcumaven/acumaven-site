@@ -244,3 +244,10 @@ footer strong { color: #fff; }
   background-position: 45% 28%;
   background-repeat: no-repeat;
 } }
+
+/* Footer brand */
+.footer-brand { display: flex; align-items: center; gap: 1.5rem; }
+.footer-logo { width: 120px; height: auto; opacity: 0.9; }
+.footer-brand p { margin: 0; }
+.footer-brand a { color: rgba(255,255,255,0.7); }
+@media (max-width: 600px) { .footer-brand { flex-direction: column; text-align: center; } .footer-logo { width: 100px; } }
