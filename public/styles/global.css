@@ -215,10 +215,10 @@ footer strong { color: #fff; }
 }
 
 /* Logo */
-.logo-img { height: 48px; width: auto; display: block; }
-@media (max-width: 768px) { .logo-img { height: 38px; } }
+.logo-img { height: 64px; width: auto; display: block; }
+@media (max-width: 768px) { .logo-img { height: 50px; } }
 
 /* Logo wordmark */
 .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
-.logo-text { color: #fff; font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+.logo-text { color: #fff; font-family: 'Anton', sans-serif; font-size: 1.6rem; letter-spacing: 0.02em; font-weight: 400; }
 .logo-text em { font-style: normal; color: #7eb8e8; }
