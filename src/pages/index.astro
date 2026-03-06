@@ -1,26 +1,47 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Acumatica ERP Consulting — New Implementations & Rescue Projects">
+<Base title="Acumatica ERP Consulting — Implementation, Rescue, Integration">
 
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Your Acumatica implementation shouldn't be a rescue project —<br/><em>but if it is, that's our specialty too.</em></h1>
-      <p>AcuMaven is a boutique Acumatica consulting firm for field service companies. We handle new implementations, struggling ones, and the integrations your last partner called "out of scope."</p>
-      <a href="#contact" class="btn-primary">Tell us what's broken</a>
-      <a href="#services" class="btn-secondary">See what we do</a>
+      <h1>Acumatica Done Right.<br/><em>Or Fixed Fast.</em></h1>
+      <p>Implementation. Rescue. Integration. For companies that can't afford to get ERP wrong.</p>
+      <a href="#contact" class="btn-primary">Talk to Steve</a>
+      <a href="/services" class="btn-secondary">See what we do</a>
     </div>
   </section>
 
-  <!-- Proof bar -->
+  <!-- Proof / Stats -->
   <div class="proof-bar">
     <div class="container">
-      <div class="badges">
-        <div class="badge"><strong>Acumatica Certified</strong>Implementation PM · Business Consultant</div>
-        <div class="badge"><strong>API Certified</strong>REST API · OData Integration Developer</div>
-        <div class="badge"><strong>Celigo Certified</strong>Official Integration Partner</div>
-        <div class="badge"><strong>10+ Acumatica Badges</strong>Module depth across core ERP</div>
+      <div class="stats-grid">
+        <div class="stat-block">
+          <span class="stat-number">11</span>
+          <span class="stat-label">Acumatica Certifications</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Implementations Delivered</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Trades Served — HVAC, Plumbing, Electrical</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client Industries -->
+  <div class="industries-strip">
+    <div class="container">
+      <h3>Industries We Serve</h3>
+      <div class="industries-list">
+        <span class="industry-tag">Construction</span>
+        <span class="industry-tag">Field Service</span>
+        <span class="industry-tag">Manufacturing</span>
+        <span class="industry-tag">Distribution</span>
       </div>
     </div>
   </div>
@@ -29,33 +50,26 @@ import Base from '../layouts/Base.astro';
   <section id="services">
     <div class="container">
       <h2>What We Do</h2>
-      <p class="section-sub">Acumatica expertise built around field service companies. Not generalists.</p>
+      <p class="section-sub">Acumatica expertise built around the companies that can't afford ERP failure.</p>
       <div class="services-grid">
         <div class="service-card">
-          <h3>🔧 ERP Implementation</h3>
-          <p>Full Acumatica implementations for field service companies. From discovery through go-live — done right the first time, or fixed after someone else didn't.</p>
+          <h3>🏗️ Acumatica Implementation</h3>
+          <p>New deployments for construction, field service, and manufacturing companies. Full project lifecycle from discovery through go-live.</p>
         </div>
         <div class="service-card">
-          <h3>⚙️ Customization & Development</h3>
-          <p>Graph Extensions, screen modifications, workflow automation. When vanilla Acumatica isn't enough, we build what you need.</p>
+          <h3>🚨 Rescue Projects</h3>
+          <p>Takes over failed or stalled implementations. We know what went wrong and the fastest path from broken to working.</p>
         </div>
         <div class="service-card">
-          <h3>📊 Reporting & Analytics</h3>
-          <p>ARM Reports, Velixo dashboards, Generic Inquiries. Get the data visibility your operations actually require.</p>
-        </div>
-        <div class="service-card">
-          <h3>🔁 Celigo Integration</h3>
-          <p>Official Celigo Partner. We connect Acumatica to HubSpot, Shopify, Salesforce, and more — and the integration logic holds up in production.</p>
-        </div>
-        <div class="service-card">
-          <h3>⬆️ Upgrades & Migrations</h3>
-          <p>Still on 24R1? We run Acumatica version migrations and upgrade projects. Clean, tested, and on schedule.</p>
+          <h3>🔁 Integration Development</h3>
+          <p>Celigo, Boomi, REST API. Connects Acumatica to your tech stack — integrations that hold up in production.</p>
         </div>
         <div class="service-card">
           <h3>🤝 Ongoing Support</h3>
-          <p>We don't disappear after go-live. Managed support, training, and continuous improvement for Acumatica environments that need a real partner.</p>
+          <p>Post-go-live support, training, customization, and performance tuning. A real partner, not a help desk ticket.</p>
         </div>
       </div>
+      <p style="margin-top: 2rem; text-align: center;"><a href="/services" class="btn-primary">Full Services Overview</a></p>
     </div>
   </section>
 
@@ -111,20 +125,16 @@ import Base from '../layouts/Base.astro';
     <div class="container">
       <h2>About AcuMaven</h2>
       <p class="section-sub">Boutique practice. Real expertise. No account managers between you and the consultant doing the work.</p>
-      <p style="max-width:680px; color: var(--muted);">AcuMaven was founded by Steve Milner, an Acumatica consultant with deep roots in field service operations. We work with $10M–$50M companies that need an ERP partner who understands dispatch, service orders, mobile technicians, and billing — not just the software spec sheet.<br/><br/>
-      If your implementation went sideways, we've seen it before. If you're starting fresh, we'll do it right. Either way, you'll talk directly to the person doing the work.<br/><br/>
-      <strong>Steve Milner</strong> · Official Celigo Partner · San Clemente, CA</p>
-      <p style="max-width:680px; color: var(--muted); margin-top: 1rem; font-size: 0.9rem;">
-        <strong style="color: var(--navy);">Acumatica Certifications:</strong> Implementation Project Manager · Business Consultant · Construction Business Consultant · Technical Specialist · REST API Integration Developer · OData Integration Developer · Case Management · Inventory &amp; Order Management · Fixed Assets · Project Accounting
-      </p>
+      <p style="max-width:680px; color: var(--muted);">AcuMaven was founded by Steve Milner — ex-military, 20+ years in business software, Acumatica specialist with 11 active certifications. We work with companies that need an ERP partner who actually knows the software, understands their industry, and shows up after go-live.<br/><br/>
+      <a href="/about">Learn more about Steve and AcuMaven →</a></p>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <h2>Tell us what's broken</h2>
-      <p class="section-sub">Or what you're building. Either way, we'll give you a straight answer in 24 hours.</p>
+      <h2>Talk to Steve</h2>
+      <p class="section-sub">Tell us what's broken — or what you're building. Either way, you'll get a straight answer in 24 hours.</p>
       <div class="contact-form">
         <form action="mailto:steve@acumaveninc.com" method="GET" enctype="text/plain">
           <label>Name</label>

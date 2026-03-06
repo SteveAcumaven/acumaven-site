@@ -3,7 +3,7 @@ export interface Props {
   title: string;
   description?: string;
 }
-const { title, description = "AcuMaven — Acumatica ERP consulting specialists for field service companies. New implementations, rescue projects, and Celigo integration." } = Astro.props;
+const { title, description = "AcuMaven — Acumatica ERP consulting specialists. New implementations, rescue projects, and integration development." } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -31,11 +31,12 @@ const { title, description = "AcuMaven — Acumatica ERP consulting specialists 
     <div class="container">
       <a href="/" class="logo"><span class="logo-text">Acu<em>Maven</em></span></a>
       <ul>
-        <li><a href="/#services">Services</a></li>
+        <li><a href="/services">Services</a></li>
         <li><a href="/celigo">Celigo</a></li>
+        <li><a href="/aculens">AcuLens</a></li>
         <li><a href="/blog">Blog</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact" class="cta-nav">Tell us what's broken</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/#contact" class="cta-nav">Talk to Steve</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling||0;document.querySelector('nav ul').classList.toggle('open')">
         <span></span><span></span><span></span>
@@ -49,6 +50,14 @@ const { title, description = "AcuMaven — Acumatica ERP consulting specialists 
         <img src="/logos/logo-white.svg" alt="AcuMaven" class="footer-logo" />
         <p>Acumatica ERP Consulting &nbsp;·&nbsp; Official Celigo Partner<br />
         San Clemente, CA &nbsp;·&nbsp; <a href="tel:19492577031">(949) 257-7031</a> &nbsp;·&nbsp; <a href="mailto:steve@acumaveninc.com">steve@acumaveninc.com</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="/services">Services</a>
+        <a href="/celigo">Celigo Integration</a>
+        <a href="/aculens">AcuLens</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/#contact">Contact</a>
       </div>
     </div>
   </footer>
