@@ -1,0 +1,43 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-navy text-white">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-5">
+          <img src="/logo-white.svg" alt="AcuMaven" class="h-12 w-12 object-contain" />
+          <span class="text-xl font-extrabold tracking-tight text-white">AcuMaven</span>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-md">
+          Acumatica ERP implementation, rescue projects, and integration.
+          26 years of enterprise software expertise. Official Celigo Partner.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">Company</h4>
+        <ul class="space-y-3">
+          <li><a href="/services" class="text-sm text-slate-300 hover:text-white transition-colors">Services</a></li>
+          <li><a href="/celigo" class="text-sm text-slate-300 hover:text-white transition-colors">Celigo</a></li>
+          <li><a href="/about" class="text-sm text-slate-300 hover:text-white transition-colors">About</a></li>
+          <li><a href="/blog" class="text-sm text-slate-300 hover:text-white transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">Get in Touch</h4>
+        <ul class="space-y-3">
+          <li><a href="/contact" class="text-sm text-slate-300 hover:text-white transition-colors">Contact Us</a></li>
+          <li><a href="mailto:steve@acumaveninc.com" class="text-sm text-slate-300 hover:text-white transition-colors">steve@acumaveninc.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-slate-500">&copy; {currentYear} AcuMaven Inc. All rights reserved.</p>
+      <p class="text-xs text-slate-500">Official Celigo Partner &middot; Acumatica Certified</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,142 @@
+---
+const links = [
+  { href: "/services", label: "Services" },
+  { href: "/celigo", label: "Celigo" },
+  { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
+];
+---
+
+<header id="site-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <nav class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex h-20 items-center justify-between">
+      <a href="/" class="flex items-center gap-3 shrink-0">
+        <img src="/logo-dark.svg" alt="AcuMaven" class="h-12 w-12 nav-logo object-contain" />
+        <span class="nav-wordmark text-xl font-extrabold tracking-tight">AcuMaven</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-1">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200"
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="/contact"
+          class="ml-4 inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors duration-200"
+        >
+          Get in Touch
+        </a>
+      </div>
+
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6 nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="menu-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden pb-6">
+      <div class="flex flex-col gap-1 pt-2">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class="px-4 py-3 text-sm font-medium text-slate-dark rounded-lg hover:bg-navy/5 transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="/contact"
+          class="mt-2 inline-flex items-center justify-center px-5 py-3 text-sm font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  #site-nav {
+    background: transparent;
+  }
+  #site-nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .nav-icon {
+    color: #fff;
+  }
+  #site-nav.scrolled .nav-link {
+    color: var(--color-slate-dark);
+  }
+  #site-nav.scrolled .nav-link:hover {
+    color: var(--color-navy);
+    background: var(--color-gray-warm);
+  }
+  #site-nav.scrolled .nav-icon {
+    color: var(--color-slate-dark);
+  }
+  #site-nav.scrolled .nav-logo {
+    filter: none;
+  }
+  .nav-logo {
+    filter: brightness(0) invert(1);
+  }
+  #site-nav.scrolled .nav-logo {
+    filter: none;
+  }
+  .nav-wordmark {
+    color: #fff;
+  }
+  #site-nav.scrolled .nav-wordmark {
+    color: var(--color-navy);
+  }
+</style>
+
+<script>
+  const nav = document.getElementById("site-nav")!;
+  const btn = document.getElementById("mobile-menu-btn")!;
+  const menu = document.getElementById("mobile-menu")!;
+  const openIcon = document.getElementById("menu-open")!;
+  const closeIcon = document.getElementById("menu-close")!;
+
+  function checkScroll() {
+    if (window.scrollY > 40) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  }
+  checkScroll();
+  window.addEventListener("scroll", checkScroll, { passive: true });
+
+  btn.addEventListener("click", () => {
+    const isOpen = !menu.classList.contains("hidden");
+    menu.classList.toggle("hidden");
+    openIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+    if (!isOpen) {
+      nav.classList.add("scrolled");
+    } else {
+      checkScroll();
+    }
+  });
+</script>

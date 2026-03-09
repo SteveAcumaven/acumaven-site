@@ -1,0 +1,186 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact" description="Start a conversation about your Acumatica project. Implementation, rescue, integration, or ongoing support.">
+  <!-- Hero -->
+  <section class="bg-navy pt-32 pb-16 lg:pt-40 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-teal font-semibold text-sm tracking-wide uppercase mb-4">Contact</p>
+        <h1 class="text-4xl lg:text-5xl font-extrabold text-white mb-6">
+          Let's Talk.
+        </h1>
+        <p class="text-lg text-slate-300 leading-relaxed">
+          Tell us about your project and we'll get back to you within
+          one business day with an honest assessment and clear next steps.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-16">
+        <div class="lg:col-span-3">
+          <form
+            action="https://formspree.io/f/xeereenp"
+            method="POST"
+            class="space-y-6"
+            id="contact-form"
+          >
+            <!-- Honeypot: hidden from humans, catches basic bots -->
+            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-navy mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-navy mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors"
+                  placeholder="you@company.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="company" class="block text-sm font-medium text-navy mb-2">Company</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                class="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors"
+                placeholder="Company name"
+              />
+            </div>
+
+            <div>
+              <label for="type" class="block text-sm font-medium text-navy mb-2">What do you need?</label>
+              <select
+                id="type"
+                name="type"
+                class="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors bg-white"
+              >
+                <option value="">Select one...</option>
+                <option value="implementation">New Implementation</option>
+                <option value="rescue">Rescue Project</option>
+                <option value="integration">Integration (Celigo / API)</option>
+                <option value="support">Ongoing Support</option>
+                <option value="other">Something Else</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-navy mb-2">Tell me about your project</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors resize-y"
+                placeholder="What's going on? Where are you stuck? What are you trying to accomplish?"
+              ></textarea>
+            </div>
+
+            <!-- Cloudflare Turnstile CAPTCHA -->
+            <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="light"></div>
+
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors duration-200"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <div id="form-success" class="hidden p-6 rounded-xl bg-teal/5 border border-teal/20 mt-6">
+            <p class="font-semibold text-navy mb-1">Message sent.</p>
+            <p class="text-sm text-text-muted">I'll get back to you within one business day — usually sooner.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <div class="bg-gray-warm rounded-2xl p-8 lg:p-10 sticky top-28">
+            <h3 class="font-bold text-navy mb-6">Other ways to reach me</h3>
+
+            <div class="space-y-6">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-text-muted mb-1">Email</p>
+                <a href="mailto:steve@acumaveninc.com" class="text-sm text-teal hover:text-teal-dark transition-colors font-medium">
+                  steve@acumaveninc.com
+                </a>
+              </div>
+
+              <hr class="border-slate-200" />
+
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">What to expect</p>
+                <ul class="space-y-3">
+                  <li class="flex gap-3">
+                    <svg class="w-4 h-4 text-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <span class="text-sm text-text-muted">Personal response within 1 business day</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <svg class="w-4 h-4 text-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <span class="text-sm text-text-muted">No sales pitch or pressure</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <svg class="w-4 h-4 text-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <span class="text-sm text-text-muted">Honest assessment of your situation</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+  const form = document.getElementById("contact-form") as HTMLFormElement;
+  const success = document.getElementById("form-success")!;
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Check Turnstile response
+    const turnstileResponse = form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]');
+    if (turnstileResponse && !turnstileResponse.value) {
+      alert("Please complete the verification check.");
+      return;
+    }
+
+    const data = new FormData(form);
+    try {
+      await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      form.classList.add("hidden");
+      success.classList.remove("hidden");
+    } catch {
+      // fallback: submit normally
+      form.submit();
+    }
+  });
+</script>

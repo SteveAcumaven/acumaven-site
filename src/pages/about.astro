@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const certifications = [
+  "Construction Business Consultant",
+  "Business Consultant",
+  "Case Management",
+  "Inventory & Order Management",
+  "Fixed Assets",
+  "REST API Integration Developer",
+  "Implementation Project Manager",
+  "OData Integration Developer",
+  "Project Accounting",
+  "Technical Specialist",
+];
+---
+
+<Layout title="About" description="Meet Steve — 26 years in business software, 11 Acumatica certifications, and an official Celigo partner.">
+  <!-- Hero -->
+  <section class="bg-navy pt-32 pb-16 lg:pt-40 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-teal font-semibold text-sm tracking-wide uppercase mb-4">About</p>
+        <h1 class="text-4xl lg:text-5xl font-extrabold text-white mb-6">
+          One consultant.<br />
+          <span class="text-teal">26 years of doing this.</span>
+        </h1>
+        <p class="text-lg text-slate-300 leading-relaxed">
+          AcuMaven isn't a big firm with layers of project managers and junior staff.
+          It's Steve — and that's the point.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-16">
+        <div class="lg:col-span-3">
+          <h2 class="text-3xl font-extrabold text-navy mb-6">The short version</h2>
+          <div class="space-y-5 text-text-muted leading-relaxed">
+            <p>
+              I've been in business software for 26 years. I've seen every kind of
+              ERP implementation — the ones that go smoothly, the ones that go sideways,
+              and the ones everyone else gave up on.
+            </p>
+            <p>
+              I started AcuMaven because I got tired of watching companies get burned
+              by the big-firm model: sold by a partner, scoped by a manager, built by
+              a junior consultant who's three projects deep and learning on your dime.
+            </p>
+            <p>
+              At AcuMaven, I'm the person you talk to from day one through go-live
+              and beyond. I scope it, I build it, I support it. No hand-offs, no
+              surprises, no one disappearing after the contract is signed.
+            </p>
+            <p>
+              I specialize in Acumatica for construction, field service, manufacturing,
+              and distribution. I'm one of few consultants who holds both deep
+              Acumatica certifications and an official Celigo partnership — which
+              means your ERP and your integrations are handled by the same person
+              who understands the full picture.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <div class="bg-gray-warm rounded-2xl p-8 lg:p-10 sticky top-28">
+            <h3 class="font-bold text-navy mb-2">Steve</h3>
+            <p class="text-sm text-text-muted mb-6">Founder & Principal Consultant</p>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-extrabold text-teal">26</span>
+                <span class="text-sm text-text-muted">years in business software</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-extrabold text-teal">11</span>
+                <span class="text-sm text-text-muted">Acumatica certifications</span>
+              </div>
+            </div>
+
+            <a
+              href="/contact"
+              class="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors duration-200"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-20 lg:py-28 bg-gray-warm">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <p class="text-teal font-semibold text-sm tracking-wide uppercase mb-3">Credentials</p>
+        <h2 class="text-3xl font-extrabold text-navy">11 Acumatica Certifications</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {certifications.map((cert) => (
+          <div class="flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-200">
+            <svg class="w-5 h-5 text-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-sm font-medium text-navy">{cert}</span>
+          </div>
+        ))}
+        <div class="flex items-center gap-3 p-4 bg-teal/5 rounded-xl border border-teal/20">
+          <svg class="w-5 h-5 text-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <span class="text-sm font-medium text-teal">Official Celigo Partner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 lg:py-28 bg-navy">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-white mb-4">
+        Let's talk about your project.
+      </h2>
+      <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10">
+        No sales pitch. No discovery committee. Just a conversation
+        with someone who's been doing this for 26 years.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors duration-200"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </section>
+</Layout>
