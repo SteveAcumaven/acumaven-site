@@ -97,8 +97,9 @@ import Layout from "../layouts/Layout.astro";
               ></textarea>
             </div>
 
-            <!-- Cloudflare Turnstile CAPTCHA -->
+            <!-- Cloudflare Turnstile CAPTCHA — uncomment when you have a site key
             <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="light"></div>
+            -->
 
             <button
               type="submit"
@@ -153,7 +154,9 @@ import Layout from "../layouts/Layout.astro";
   </section>
 </Layout>
 
+<!-- Uncomment when Turnstile site key is ready
 <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+-->
 
 <script>
   const form = document.getElementById("contact-form") as HTMLFormElement;
@@ -161,14 +164,6 @@ import Layout from "../layouts/Layout.astro";
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    // Check Turnstile response
-    const turnstileResponse = form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]');
-    if (turnstileResponse && !turnstileResponse.value) {
-      alert("Please complete the verification check.");
-      return;
-    }
-
     const data = new FormData(form);
     try {
       await fetch(form.action, {
