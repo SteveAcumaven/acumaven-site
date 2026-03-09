@@ -32,3 +32,59 @@
     letter-spacing: -0.02em;
   }
 }
+
+/* Hero animations */
+@keyframes hero-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-spin-slow {
+  animation: hero-spin 50s linear infinite;
+}
+
+/* Floating chip styles */
+.chip-glass {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 5px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.chip-teal {
+  background: rgba(79, 184, 178, 0.12);
+  border: 1px solid rgba(79, 184, 178, 0.25);
+  color: #4FB8B2;
+}
+.chip-white {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Float animations with staggered delays */
+.hero-float    { animation: hero-float 5s ease-in-out infinite; }
+.hero-float-d1 { animation: hero-float 5s ease-in-out 0.6s infinite; }
+.hero-float-d2 { animation: hero-float 5s ease-in-out 1.2s infinite; }
+.hero-float-d3 { animation: hero-float 5s ease-in-out 1.8s infinite; }
+.hero-float-d4 { animation: hero-float 5s ease-in-out 2.4s infinite; }
+.hero-float-d5 { animation: hero-float 5s ease-in-out 3.0s infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-spin-slow,
+  .hero-float,
+  .hero-float-d1,
+  .hero-float-d2,
+  .hero-float-d3,
+  .hero-float-d4,
+  .hero-float-d5 {
+    animation: none;
+  }
+}
