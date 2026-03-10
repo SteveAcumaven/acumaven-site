@@ -1,0 +1,109 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const title = "Celigo vs. Boomi vs. MuleSoft: Which Integration Platform Is Right for Mid-Market?";
+const date = "March 5, 2026";
+---
+
+<Layout title={title} description="Three integration platforms, very different trade-offs. We break down cost, complexity, and where each one actually makes sense for mid-market companies.">
+  <article>
+    <section class="bg-navy pt-32 pb-16 lg:pt-40 lg:pb-20">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8">
+        <a href="/blog" class="inline-flex items-center gap-2 text-sm text-teal hover:text-teal-dark transition-colors mb-8">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+          Back to Blog
+        </a>
+        <p class="text-slate-400 text-sm mb-4">{date}</p>
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-white leading-tight">{title}</h1>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-20">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8 prose-custom">
+        <p class="text-lg text-text-muted leading-relaxed mb-8">
+          If you're running Acumatica and need to connect it to other systems, you've probably heard three names: Celigo, Boomi, and MuleSoft. All three can get the job done — but they're built for very different buyers, budgets, and levels of complexity.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">The quick take</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-slate-200">
+                <th class="text-left py-3 pr-4 font-bold text-navy"></th>
+                <th class="text-left py-3 px-4 font-bold text-teal">Celigo</th>
+                <th class="text-left py-3 px-4 font-bold text-navy">Boomi</th>
+                <th class="text-left py-3 px-4 font-bold text-navy">MuleSoft</th>
+              </tr>
+            </thead>
+            <tbody class="text-text-muted">
+              <tr class="border-b border-slate-100">
+                <td class="py-3 pr-4 font-medium text-navy">Best for</td>
+                <td class="py-3 px-4">Mid-market ERP</td>
+                <td class="py-3 px-4">Enterprise IT</td>
+                <td class="py-3 px-4">Large enterprise</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-3 pr-4 font-medium text-navy">Complexity</td>
+                <td class="py-3 px-4">Low–Medium</td>
+                <td class="py-3 px-4">Medium–High</td>
+                <td class="py-3 px-4">High</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-3 pr-4 font-medium text-navy">Annual cost</td>
+                <td class="py-3 px-4">$15K–$50K</td>
+                <td class="py-3 px-4">$50K–$150K</td>
+                <td class="py-3 px-4">$100K–$300K+</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-3 pr-4 font-medium text-navy">Time to value</td>
+                <td class="py-3 px-4">Weeks</td>
+                <td class="py-3 px-4">Months</td>
+                <td class="py-3 px-4">Months–Quarters</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-navy">Acumatica fit</td>
+                <td class="py-3 px-4">Excellent</td>
+                <td class="py-3 px-4">Good</td>
+                <td class="py-3 px-4">Overkill for most</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">Celigo: Built for the mid-market</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          Celigo is purpose-built for companies running ERP systems like Acumatica, NetSuite, and Sage. It has pre-built connectors for the tools mid-market companies actually use — Shopify, Salesforce, ShipStation, ADP — and a visual flow builder that business users can monitor and manage after launch.
+        </p>
+        <p class="text-text-muted leading-relaxed mb-6">
+          The biggest advantage: speed. A Celigo integration that would take a custom developer weeks to build can often be configured in days. And when something breaks, the error dashboard tells you exactly what happened and why — in plain English.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">Boomi: The enterprise middleware play</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          Boomi (now part of TPG) is a solid platform for larger organizations with dedicated IT teams. It handles complex multi-system orchestration well and has strong data governance features. But it requires more technical expertise to configure and maintain, and the licensing costs reflect that.
+        </p>
+        <p class="text-text-muted leading-relaxed mb-6">
+          For a mid-market company running Acumatica, Boomi is often more platform than you need. You'll pay for capabilities you won't use and need more specialized talent to keep it running.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">MuleSoft: Enterprise-grade, enterprise-priced</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          MuleSoft is the gold standard for enterprise API management. If you're a Fortune 500 company with hundreds of systems, dedicated integration architects, and a seven-figure IT budget, it's a strong choice. For everyone else, it's expensive overhead.
+        </p>
+        <p class="text-text-muted leading-relaxed mb-6">
+          We've seen mid-market companies buy MuleSoft because it "sounded enterprise-grade" — then spend more on the integration platform than on Acumatica itself. That's a mismatch.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">Our recommendation</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          For most mid-market companies running Acumatica, Celigo is the right fit. It's cost-effective, fast to deploy, maintainable by your team, and purpose-built for the kinds of integrations you actually need. As an official Celigo partner, we've deployed it across dozens of Acumatica environments — and it consistently delivers the best balance of power, simplicity, and cost.
+        </p>
+
+        <div class="mt-12 p-8 rounded-2xl bg-gray-warm border border-slate-200">
+          <h3 class="font-bold text-navy mb-2">Need help choosing the right integration platform?</h3>
+          <p class="text-sm text-text-muted mb-4">We'll assess your integration needs and give you a straight recommendation — no vendor bias.</p>
+          <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors duration-200">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>

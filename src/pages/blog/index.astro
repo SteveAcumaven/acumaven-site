@@ -1,8 +1,35 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+
+const posts = [
+  {
+    slug: "2026-03-05-acumatica-implementation-failing",
+    title: "5 Signs Your Acumatica Implementation Is Failing (And What to Do About It)",
+    description: "Most failing implementations show the same warning signs early. Here's what to look for before it's too late.",
+    date: "March 5, 2026",
+  },
+  {
+    slug: "2026-03-05-celigo-vs-boomi-vs-mulesoft",
+    title: "Celigo vs. Boomi vs. MuleSoft: Which Integration Platform Is Right for Mid-Market?",
+    description: "Three platforms, very different trade-offs. We break down cost, complexity, and where each one actually makes sense.",
+    date: "March 5, 2026",
+  },
+  {
+    slug: "2026-03-05-what-to-ask-acumatica-consultant",
+    title: "What to Ask Before Hiring an Acumatica Consultant",
+    description: "The questions most companies don't think to ask — until after the project goes sideways.",
+    date: "March 5, 2026",
+  },
+  {
+    slug: "2026-01-15-ai-erp-business-software",
+    title: "How AI Is Transforming ERP and Business Software",
+    description: "What the AI wave actually means for mid-market ERP and where the real leverage is.",
+    date: "January 15, 2026",
+  },
+];
 ---
 
-<Layout title="Blog" description="Insights on Acumatica ERP implementation, integration, and best practices from a 25+ year veteran.">
+<Layout title="Blog" description="Insights on Acumatica ERP implementation, integration, AI, and best practices from a 25+ year veteran.">
   <!-- Hero -->
   <section class="bg-navy pt-32 pb-16 lg:pt-40 lg:pb-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -12,31 +39,23 @@ import Layout from "../../layouts/Layout.astro";
           From the field.
         </h1>
         <p class="text-lg text-slate-300 leading-relaxed">
-          Practical insights on Acumatica implementation, integration,
-          and what actually works in the real world.
+          Hard-won perspective on Acumatica, integrations, and what's coming next.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Blog Content -->
+  <!-- Blog Posts -->
   <section class="py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="max-w-2xl mx-auto text-center">
-        <div class="w-16 h-16 rounded-2xl bg-teal/10 flex items-center justify-center mx-auto mb-6">
-          <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" /></svg>
-        </div>
-        <h2 class="text-2xl font-bold text-navy mb-3">Posts coming soon.</h2>
-        <p class="text-text-muted leading-relaxed mb-8">
-          I'm working on writing up some of the patterns and lessons
-          I've learned over 25+ years of ERP work. Check back soon.
-        </p>
-        <a
-          href="/contact"
-          class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors duration-200"
-        >
-          Get in touch instead
-        </a>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        {posts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="group block p-6 lg:p-8 rounded-2xl border border-slate-200 hover:border-teal/30 hover:shadow-lg hover:shadow-teal/5 transition-all duration-300">
+            <p class="text-xs text-text-muted mb-3">{post.date}</p>
+            <h2 class="text-lg font-bold text-navy mb-2 group-hover:text-teal transition-colors">{post.title}</h2>
+            <p class="text-sm text-text-muted leading-relaxed">{post.description}</p>
+          </a>
+        ))}
       </div>
     </div>
   </section>

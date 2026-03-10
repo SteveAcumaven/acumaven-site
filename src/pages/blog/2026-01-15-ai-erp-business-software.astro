@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const title = "How AI Is Transforming ERP and Business Software";
+const date = "January 15, 2026";
+---
+
+<Layout title={title} description="What the AI wave actually means for mid-market ERP and where the real leverage is for companies running Acumatica.">
+  <article>
+    <section class="bg-navy pt-32 pb-16 lg:pt-40 lg:pb-20">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8">
+        <a href="/blog" class="inline-flex items-center gap-2 text-sm text-teal hover:text-teal-dark transition-colors mb-8">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+          Back to Blog
+        </a>
+        <p class="text-slate-400 text-sm mb-4">{date}</p>
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-white leading-tight">{title}</h1>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-20">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8 prose-custom">
+        <p class="text-lg text-text-muted leading-relaxed mb-8">
+          Every ERP vendor is talking about AI. Most of it is marketing. But underneath the hype, there are real shifts happening that will fundamentally change how mid-market companies use business software — and the companies that move early will have a significant advantage.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">What's real right now</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          The most immediate AI impact in ERP isn't the flashy stuff — it's the mundane. Document processing, data entry automation, anomaly detection in financial data, and intelligent search across your ERP data. These aren't theoretical. They're deployable today and they save real hours every week.
+        </p>
+        <p class="text-text-muted leading-relaxed mb-6">
+          For Acumatica users specifically, the REST API and OData endpoints make the system unusually well-suited for AI integration. You can build intelligent agents that read from and write to Acumatica without touching the core system — something that's much harder with older, closed ERP platforms.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">Where the leverage is for mid-market</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          The biggest opportunity isn't replacing people — it's augmenting them. A field service technician with AI-assisted diagnostics. A project accountant with automated variance detection. A warehouse manager with predictive demand signals. These are force multipliers that let smaller teams compete with much larger ones.
+        </p>
+        <p class="text-text-muted leading-relaxed mb-6">
+          The companies seeing the most impact are the ones connecting AI to their existing operational data — not buying a new platform, but making the platform they already have smarter. That's where ERP + AI gets interesting.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">The agent revolution</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          The next wave isn't chatbots — it's autonomous agents that can take action inside your business systems. Imagine an agent that monitors your Acumatica instance, detects a supply chain disruption, recalculates lead times, and drafts purchase orders for your approval — all before you've had your morning coffee.
+        </p>
+        <p class="text-text-muted leading-relaxed mb-6">
+          Open-source AI agent platforms are making this accessible to mid-market companies for the first time. The infrastructure that was only available to tech giants two years ago is now available to a construction company running Acumatica.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">What to do now</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          You don't need to overhaul your tech stack. Start with three things:
+        </p>
+        <ul class="space-y-3 text-text-muted mb-6">
+          <li class="flex gap-3">
+            <svg class="w-4 h-4 text-teal shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span><strong class="text-navy">Clean your data.</strong> AI is only as good as the data it reads. If your Acumatica instance is full of duplicate records and inconsistent naming, fix that first.</span>
+          </li>
+          <li class="flex gap-3">
+            <svg class="w-4 h-4 text-teal shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span><strong class="text-navy">Enable your APIs.</strong> Make sure your Acumatica REST and OData endpoints are configured and secured. This is the foundation for any AI integration.</span>
+          </li>
+          <li class="flex gap-3">
+            <svg class="w-4 h-4 text-teal shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span><strong class="text-navy">Pick one high-value use case.</strong> Don't try to "add AI" to everything. Find the one process where your team spends the most time on repetitive work and start there.</span>
+          </li>
+        </ul>
+
+        <div class="mt-12 p-8 rounded-2xl bg-gray-warm border border-slate-200">
+          <h3 class="font-bold text-navy mb-2">Interested in AI-powered Acumatica?</h3>
+          <p class="text-sm text-text-muted mb-4">We're building AI tools for Acumatica field service and would love to talk about what's possible for your business.</p>
+          <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors duration-200">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>

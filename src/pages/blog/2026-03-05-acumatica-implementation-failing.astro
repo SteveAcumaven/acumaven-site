@@ -1,0 +1,67 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const title = "5 Signs Your Acumatica Implementation Is Failing (And What to Do About It)";
+const date = "March 5, 2026";
+---
+
+<Layout title={title} description="Most failing Acumatica implementations show the same warning signs early. Here's what to look for before it's too late.">
+  <article>
+    <section class="bg-navy pt-32 pb-16 lg:pt-40 lg:pb-20">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8">
+        <a href="/blog" class="inline-flex items-center gap-2 text-sm text-teal hover:text-teal-dark transition-colors mb-8">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+          Back to Blog
+        </a>
+        <p class="text-slate-400 text-sm mb-4">{date}</p>
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-white leading-tight">{title}</h1>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-20">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8 prose-custom">
+        <p class="text-lg text-text-muted leading-relaxed mb-8">
+          Most failing Acumatica implementations don't blow up overnight. They erode slowly — and by the time leadership notices, the damage is done. After rescuing dozens of stalled projects, we've identified the five warning signs that show up early and consistently.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">1. The consultant who sold the project isn't the one delivering it</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          This is the most common pattern in failed implementations. A senior partner wins the deal, then hands it off to a junior team. The expertise that convinced you to sign the contract disappears after week one. If you're explaining your business to a new face every month, that's a red flag.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">2. Requirements keep changing after scoping is "complete"</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          Scope creep happens on every project. But when core requirements keep shifting three or four months in, it usually means scoping was rushed or done by someone who didn't understand your industry. A well-scoped Acumatica project has a clear map of what's being built and why — before anyone writes a line of configuration.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">3. No one can explain how data will migrate</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          Data migration is where implementations go to die. If your consulting team can't show you a clear migration plan — what's coming over, what's being cleaned, what's being left behind — by the midpoint of the project, you're headed for a painful go-live or a delayed one.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">4. Testing is an afterthought</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          "We'll test it during UAT" is not a testing strategy. If your team is seeing the configured system for the first time during user acceptance testing, every bug becomes a crisis. Testing should happen in waves, with your actual workflows and your actual data, long before anyone talks about a go-live date.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">5. The go-live date was set before scoping was finished</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          Arbitrary deadlines set by sales teams or executives who aren't involved in delivery are the fastest way to guarantee a failed implementation. A realistic go-live date comes from the work, not the other way around. If your date was picked before anyone understood the full scope, push back now — not the week before launch.
+        </p>
+
+        <h2 class="text-2xl font-bold text-navy mt-12 mb-4">What to do if you see these signs</h2>
+        <p class="text-text-muted leading-relaxed mb-6">
+          First: don't panic. A struggling implementation isn't a dead one. But it does need intervention — and the sooner, the better. Get an independent assessment from someone who's rescued projects before. A fresh set of certified eyes can usually identify the core issues in a matter of days, not months.
+        </p>
+        <p class="text-text-muted leading-relaxed mb-6">
+          At AcuMaven, rescue projects are a core part of what we do. We've taken over stalled implementations across construction, field service, manufacturing, and distribution — and gotten them to go-live.
+        </p>
+
+        <div class="mt-12 p-8 rounded-2xl bg-gray-warm border border-slate-200">
+          <h3 class="font-bold text-navy mb-2">Need a second opinion on your implementation?</h3>
+          <p class="text-sm text-text-muted mb-4">We'll give you an honest assessment — no pitch, no pressure.</p>
+          <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg bg-teal text-white hover:bg-teal-dark transition-colors duration-200">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>
